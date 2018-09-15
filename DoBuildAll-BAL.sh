@@ -30,7 +30,7 @@ if [[ "${TO_BUILD_ALL}" == "y" ]]; then
 	#tar zxvf ../../Diag_files/sdk-all-6.5.7.tgz -C 3rdparty/bcm-sdk/build-asfvolt16/
 	make BOARD=asfvolt16 switch_sdk
 	cd 3rdparty/bcm-sdk/build-asfvolt16/sdk-all-6.5.7/systems/linux/user/x86-generic_64-2_6
-	KERNDIR=${ONL_DIR}/packages/base/amd64/kernels/kernel-3.7-x86-64-all/builds/linux-3.7.10  BOARD=asfvolt16 ARCH=x86_64 SDKBUILD=build_bcm_user make
+	KERNDIR=${ONL_DIR}/packages/base/amd64/kernels/kernel-4.14-lts-x86-64-all/builds/jessie/linux-4.14.49  BOARD=asfvolt16 ARCH=x86_64 SDKBUILD=build_bcm_user make
 	cd ../../../../../../../../
 	make BOARD=asfvolt16 bal
 	make BOARD=asfvolt16 release_board

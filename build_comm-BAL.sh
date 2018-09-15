@@ -17,8 +17,8 @@
 :${CMM_DATE:=2017-1228}
 
 
-ONL_GIT_NAME="https://github.com/Lewis-Kang/OpenNetworkLinux.git"
-ONL_GIT_B=kernel_3.7.10
+ONL_GIT_NAME="https://github.com/jcsteven/OpenNetworkLinux.git"
+ONL_GIT_B=asxvolt16
 ONL_NAME=OpenNetworkLinux
 ONL_DIR=${PPWW}/${ONL_NAME}
 
@@ -46,7 +46,7 @@ EDGECORE_DOWNLOAD_DIR=${HOME}/edgecore/download
 : ${BALSRC_ZIPNAME:=SW-BCM68620_2_6_0_1.zip}
 
 : ${SWISDK_TARNAME:=sdk-all-6.5.7}
-: ${PATCH_FILENAME:=ACCTON_BAL_2.6.0.1-V201805281625.patch}
+: ${PATCH_FILENAME:=ACCTON_BAL_2.6.0.1-V201808011201.patch}
 
 
 BLOG_DIR="Build-log"

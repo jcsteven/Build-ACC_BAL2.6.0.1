@@ -82,19 +82,27 @@ if [[ "${TO_PREPARE_BAL}" == "y" ]]; then
 	cd  ./${BAL_NAME}
 	cat ./${PATCH_FILENAME} | patch -p1
 	cd ..
+fi
 
+TO_ONL_LINK="y"
+if [[ "${TO_ONL_LINK}" == "y" ]]; then	
+	cd ${ONL_DIR}
+	
 	#Create the link to the kernel source:
+	echo "BAL_NAME=${BAL_NAME}"
 	cd ./${BAL_NAME}/bcm68620_release
 	mkdir -p ./asfvolt16/kernels
 		cd ./asfvolt16/kernels
-		ln -s ../../../../packages/base/amd64/kernels/kernel-3.7-x86-64-all/builds/linux-3.7.10 linux-3.7.10
-		ln -s ../../../../packages/base/any/kernels/archives/linux-3.7.10.tar.xz linux-3.7.10.tar.xz
-		ln -s ../../../../packages/base/any/kernels/3.7/configs/x86_64-all/x86_64-all.config x86_64-all.config
+		ln -s ../../../../packages/base/amd64/kernels/kernel-4.14-lts-x86-64-all/builds/jessie/linux-4.14.49 linux-4.14.49
+		ln -s ../../../../packages/base/any/kernels/archives/linux-4.14.49.tar.xz linux-4.14.49.tar.xz
+		ln -s ../../../../packages/base/any/kernels/4.14-lts/configs/x86_64-all/x86_64-all.config x86_64-all.config
 		cd ../..
 	cd ../..
-	
-	cd  ${PPWW}
-fi
+
+fi	
+
+cd  ${PPWW}
+
 
 e_time=$(date +%s)
 elap_s=$((e_time-s_time))
