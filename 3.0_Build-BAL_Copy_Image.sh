@@ -26,14 +26,14 @@ if [[ "${TO_COPY_ONL_IMAGE}" == "y" ]]; then
 	   exit -1
 	fi		
 	#-- Create build imgage folder
-    cp ${BUILD_DIR1}/ONL-2.0.0_ONL-OS_*_AMD64_INSTALLED_INSTALLER ./${IMAGE_NAME}
+	cp ${BUILD_DIR1}/ONL-2.0.0_ONL-OS_*_AMD64_INSTALLED_INSTALLER ./${IMAGE_NAME}
 fi 
 
 TO_COPY_BAL_IMAGE="y"
 if [[ "${TO_COPY_BAL_IMAGE}" == "y" ]]; then 
 	echo "To Copy BAL Image File."	
 	BUILD_DIR2=./${ONL_NAME}/${BAL_NAME}/bal_release/3rdparty/maple/cur/asfvolt16/release
-	if [ ! -d ${BAL_BUILD_DIR} ]; then
+	if [ ! -d ${BAL_BUILD_DIR2} ]; then
 	   echo $LINENO "missing ${BAL_BUILD_DIR2}" |  tee -a $Record_File
 	   exit -1
 	fi			
